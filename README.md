@@ -16,8 +16,8 @@ WordPress is much faster and secure with this kind of implementation.
 Grab the last source code on our [release page](https://github.com/stokry/wp-sqlite/releases).   After that, you can unzip the files and run a standard WordPress installation. Note that you need to enable `pdo_mysql` and after that, you can open `wp-config.php` file and replace `example.com` with your url's. 
 
 ```python
-define('WP_HOME','example.com');
-define('WP_SITEURL','example.com');
+define('WP_HOME','http://example.com');
+define('WP_SITEURL','http://example.com');
 ```
 Database file already exist and you can leave that file like that, or of course, you can change if you want.
 
