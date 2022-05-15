@@ -12,7 +12,8 @@ SQLite is capable of creating in-memory databases that are very fast to work wit
 WordPress is much faster and secure with this kind of implementation. 
 
 **Installation**
-You need to enable `pdo_mysql` and after that, you can open `wp-config.php` file and replace `example.com` with your url's. 
+
+Grab the last source code on our [release page](https://github.com/stokry/wp-sqlite/releases).   After that, you can unzip the files and run a standard WordPress installation. Note that you need to enable `pdo_mysql` and after that, you can open `wp-config.php` file and replace `example.com` with your url's. 
 
 ```python
 define('WP_HOME','example.com');
