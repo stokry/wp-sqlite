@@ -24,5 +24,5 @@ Database file already exist and you can leave that file like that, or of course,
 ```python
 define('DB_FILE', 'wpsqlite.db');
 ```
-Thanks.
+Thanks for your Support ❤️
 
