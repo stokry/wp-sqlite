@@ -4900,4 +4900,5 @@ namespace {
     }
 
     $GLOBALS['wpdb'] = new WP_SQLite_DB\wpsqlitedb();
+    $GLOBALS['wpdb']->query('PRAGMA journal_mode = wal;');
 }
