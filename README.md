@@ -1,4 +1,5 @@
 
+
 # wp-sqlite
 
 WordPress running on an SQLite database.
@@ -21,8 +22,28 @@ define('WP_SITEURL','http://example.com');
 ```
 Database file already exist and you can leave that file like that, or of course, you can change if you want.
 
+For security reasons, it's best to store the SQLite database file outside of the web root directory. This way, it cannot be accessed directly via a URL.
+
+To enhance security, you can define DB_DIR in your **wp-config.php** file and set it to a directory outside of your web root. Here's an example:
+
 ```python
-define('DB_FILE', 'wpsqlite.db');
+ define('DB_DIR', '/path/to/secure/directory');
 ```
+
+Replace  `/path/to/secure/directory`  with the actual path to the directory where you want to store the SQLite database file.
+
+Also, make sure that the directory has the correct permissions set. The web server needs to be able to read and write to the directory, but for security reasons, other users should not have these permissions.
+
+Lastly, ensure that the SQLite database file itself is not accessible from the web. One way to do this is to add a  `.htaccess`  file in the directory containing the SQLite file with the following content:
+
+```python
+<Files ~ "\.db$">
+    Order allow,deny
+    Deny from all
+</Files>
+```
+
+This will prevent direct access to any `.db` files from the web.
+
 Thanks for your Support ❤️
 
